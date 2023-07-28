@@ -88,17 +88,17 @@ nav {
 .navname {
     margin-right: auto;
 }
-
+  
 .navbar a.link {
     font-size: 1.5em;
     color: var(--bg);
     padding: 20px;
 }
-
+  
 .navbar a:hover {
     color: var(--dteal);
 }
-
+  
 .navbar a.active {
     background-color: var(--bg);
 }
@@ -146,7 +146,6 @@ path:hover{
 .button:hover {
     background-color: var(--teal);
     color: var(--bg);
-
 }
 
 /************ quote box ************/

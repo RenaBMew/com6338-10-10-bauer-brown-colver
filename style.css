@@ -84,7 +84,7 @@ nav {
     margin: 0 auto;
     padding: 0;
 }
-  
+
 .navname {
     margin-right: auto;
 }
@@ -146,7 +146,6 @@ path:hover{
 .button:hover {
     background-color: var(--teal);
     color: var(--bg);
-    
 }
 
 /************ quote box ************/
@@ -163,7 +162,7 @@ path:hover{
     padding-top: 40px;
     border-top: 1px dashed #4bd6cf;
 }
-  
+
 .film {
     font-size: 0.9rem;
     text-align: center;

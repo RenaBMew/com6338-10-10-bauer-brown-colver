@@ -117,11 +117,6 @@ section {
     justify-content: center;
 }
 
-form {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 .intro {
     text-align: center;
 }

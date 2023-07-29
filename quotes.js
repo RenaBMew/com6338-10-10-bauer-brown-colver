@@ -42,21 +42,9 @@ $(document).ready(function() {
     }, {
       quote: "Louis, I think this is the beginning of a beautiful friendship.",
       film: "-Casablanca, 1942"
-    }, { 
-      quote: "Do not pity the dead, Harry. Pity the living, and, above all, those who live wihtout love.",
-      film: "-Harry Potter and the Deathly Hallows: Part 2, 2011"
     }, {
       quote: "They should have put you in a glass jar on a mantlepiece.",
       film: "-There Will Be Blood, 2007."
-    }, { 
-      quote: "The more you know who you are and what you want, the less things upset you.",
-      film: "Lost in Translation, 2003"
-    }, {
-      quote: "You like Huey Lewis and The News?",
-      film: "-American Pyscho, 2000"
-    }, {
-      quote: "In case I don't see ya, good Afternoon, good Evening and goodnight.",
-      film: "-The Truman Show, 1998"
     }, {
       quote: "A boy's best friend is his mother.",
       film: "-Psycho, 1960."
@@ -67,7 +55,7 @@ $(document).ready(function() {
       quote: "I'm about to do to you what Limp Bizkit did to music in the late '90s",
       film: "-Deadpool, 2016"
     }];
-
+  
   let randomMovieQuote = "";
   let randomFilmName = "";
 
@@ -83,4 +71,3 @@ $(document).ready(function() {
 
   randomQuote();
 });
-

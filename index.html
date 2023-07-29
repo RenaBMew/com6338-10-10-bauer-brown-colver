@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta name="description" content="Movies, Streaming, What should I watch?">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="img/video.png">
+    <link rel="stylesheet" href="style.css">
+  
+  <title>Keep it Reel!</title>  
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="link navname" href="index.html"><img src="img/video.png" width="60" height="60"></a>
+            <a class="link" href="movies.html">Movies</a>
+            <a class="link" href="streaming.html">Streaming</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main>
+            <section>
+                    <h1>Lights, Camera, Action!</h1>
+                <p>
+                    Welcome to our one-stop destination for movie enthusiasts! 
+                </p>
+                <p>
+                    Find movie information and see which streaming service they are available on.
+                    <br>
+                    <button onclick="window.location.href='movies.html';" class="button">
+                        Find Movies
+                    </button>
+                    <button onclick="window.location.href='streaming.html';" class="button">
+                        Search Streaming
+                    </button>
+                </p>
+                <p>
+                    <hr>
+                </p>
+            </section>
+
+            <section>
+                <article>
+                        <div>
+                            <h2>Movie Quotes</h2>
+                            <div class="quoterow">
+                                <div id="quote" class="phrase"> </div>
+                                <div id="title" class="film"> </div>
+                            </div>
+                        </div>
+                        <br>Click the button below to generate some random movie quotes.
+                        <br>
+                        <button id="getMessage" class="button">Get Quote</button>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        Keep it Reel! 
+        <br>
+        © 2023 - Bauer, Brown and Colver. 
+    </footer>
+
+    <script src="index.js"></script>
+
+    <script src="quotes.js"></script>
+
 </body>
 </html>

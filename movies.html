@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta name="description" content="Movies, Streaming, What should I watch?">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="img/video.png">
+    <link rel="stylesheet" href="style.css">
+  
+  <title>Keep it Reel!</title>  
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="link navname" href="index.html"><img src="img/video.png" width="60" height="60"></a>
+            <a class="link" href="movies.html">Movies</a>
+            <a class="link" href="streaming.html">Streaming</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main>
+            <section>
+                    <h1>Everything Movies</h1>
+                <p>
+                    Search for a movie to see release date, actors, plot, and more! Just enter the title below.
+                    <br>
+                    <br>
+                    <form>
+                        <input name="search" id="movie-search" type="text" placeholder="Enter title"/>
+                        <button type="submit">Search</button>
+                    </form>
+                    <section id="movie"></section>
+                </p> 
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        Keep it Reel! 
+        <br>
+        © 2023 - Bauer, Brown and Colver. 
+    </footer>
+
+    <script>
+    const movieDiv = document.getElementById('movie')
+    const form = document.querySelector('form')
+    const userInput = document.getElementById('movie-search')
+
+    form.onsubmit = async function(e) {
+        e.preventDefault()
+        try {
+        const movieName = this.search.value.trim()
+        if (!movieName) return
+        userInput.value = ''
+        const res = await fetch(`http://www.omdbapi.com/?t=${movieName}&apikey=6c6b5196&`)
+        const movieData = await res.json()
+        console.log(movieData)
+        if (movieData.Error) {
+            throw new Error(movieData.Error)
+        }
+        console.log(movieData)
+        renderMovie(movieData)
+        } catch (err) {
+            console.log(err)
+            movieDiv.innerHTML = ''
+            const error = document.createElement ('h3')
+            movieDiv.appendChild(error)
+            error.textContent = "Movie Not Found"
+        }
+    }
+
+    const renderMovie = ({
+        Actors,
+        Awards,
+        Director,
+        Genre,
+        Plot,
+        Poster,
+        Rated,
+        Runtime,
+        Title,
+        Year,
+        imdbRating
+    }) => {
+
+        movieDiv.innerHTML = 
+        `<h1>${Title}, ${Year}</h1>
+        <img src = "${Poster}">
+        <h2>IMDb Rating</h2>
+        <p>${imdbRating}</p>
+        <h2>Plot Summary</h2>
+        <p>${Plot}</p>
+        <h2>Main Cast</h2>
+        <p>${Actors}</p>
+        <h2>Genre</h2>
+        <p>${Genre}</p>
+        <h2>Runtime</h2>
+        <p>${Runtime}</p>
+        <h2>Rated</h2>
+        <p>${Rated}</p>
+        <h2>Director</h2>
+        <p>${Director}</p>
+        <h2>Awards</h2>
+        <p>${Awards}</p>`
+    }
+    </script>
+
+
+    <script src="index.js"></script>
+
 </body>
 </html>

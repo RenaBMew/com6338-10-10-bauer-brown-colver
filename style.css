@@ -6,11 +6,11 @@
 :root {
     --cream: #eee;
     --gray: #a1a1a1;
-    --teal: #bafffa;
-    --dteal: #96dadf;
+    --popcorn: #fff8ba;
+    --butter: #f8de68;
     --coffee: #38231c;
     --bg: #202020;
-  }
+}
 
 body {
     background-image: url(img/filmbg.png);
@@ -30,19 +30,23 @@ body {
 }
 
 a {
-  color: var(--gray);
-  font-weight: 800;
-  text-decoration: none;
+    color: var(--gray);
+    font-weight: 800;
+    text-decoration: none;
 }
 
 a:hover {
-  color: var(--dteal);
+    color: var(--butter);
 }
 
 p {
-  color: var(--cream);
-  text-align: center;
-  margin-top: 30px;
+    color: var(--cream);
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+b {
+    color: var(--butter)
 }
 
 div {
@@ -51,26 +55,31 @@ div {
 }
 
 h1 {
-  font-weight: 800;
-  color: var(--teal);
-  font-size: 2em;
-  padding: 30px;
-  text-align: center;
-  line-height: normal;
+    font-weight: 800;
+    color: var(--popcorn);
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+    line-height: normal;
 }
 
-h2,
+h2 {
+    font-weight: 600;
+    color: var(--butter);
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+}
+
 h3,
 h4 {
-  font-weight: 600;
-  color: var(--dteal);
-  font-size: 1.5em;
-  text-align: center;
-  margin: 40px;
+    color: var(--butter);
+    font-size: 1.2em;
+    text-align: center;
 }
 
 hr {
-    border: 2px solid #4b4b4b;
+    border: .15em solid #4b4b4b;
 }
 
 /************ Nav Bar ************/
@@ -88,17 +97,17 @@ nav {
 .navname {
     margin-right: auto;
 }
-  
+
 .navbar a.link {
     font-size: 1.5em;
     color: var(--bg);
-    padding: 20px;
+    padding: .8em;
 }
-  
+
 .navbar a:hover {
-    color: var(--dteal);
+    color: var(--butter);
 }
-  
+
 .navbar a.active {
     background-color: var(--bg);
 }
@@ -109,48 +118,70 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
-    gap: 20px;
+    margin: 1em 0;
+    gap: 1em;
 }
 
 main {
-    padding: 0 20px 50px;
+    padding: 0 1em 3em;
     margin: 0 auto;
     width: 1200px;
+}
+
+.trending {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .intro {
     text-align: center;
 }
 
-path:hover{
-    fill:red;
-  }
+path:hover {
+    fill: red;
+}
 
 .button {
-    background-color: var(--dteal);
+    background-color: var(--butter);
     color: var(--bg);
-    padding: 15px 32px;
+    padding: .8em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 12px;
+    font-size: 1em;
+    border-radius: .6em;
     transition-duration: 0.4s;
     cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 800;
-    margin: 20px;
+    margin: 1em;
 }
 
 .button:hover {
-    background-color: var(--teal);
+    background-color: var(--popcorn);
     color: var(--bg);
 }
 
+.glow {
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--popcorn), 0 0 20px var(--popcorn), 0 0 25px var(--popcorn), 0 0 30px var(--popcorn), 0 0 35px var(--popcorn);
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 15px orangered, 0 0 20px orangered, 0 0 25px orangered, 0 0 30px orangered, 0 0 35px orangered, 0 0 40px orangered;
+    }
+  }
+
 /************ quote box ************/
 
-.quoterow > div {
+.quoterow>div {
     display: block;
     justify-content: center;
     align-items: center;
@@ -159,21 +190,117 @@ path:hover{
 
 .phrase {
     font-size: 1.5rem;
-    padding-top: 40px;
-    border-top: 1px dashed #4bd6cf;
+    padding-top: 2em;
+    border-top: .01em dashed var(--butter);
 }
 
 .film {
     font-size: 0.9rem;
     text-align: center;
     font-style: italic;
-    border-bottom: 1px dashed #4bd6cf;
-    padding-bottom: 40px;
+    border-bottom: .01em dashed var(--butter);
+    padding-bottom: 2em;
+}
+
+/************ movie search ************/
+
+input {
+    background-color: transparent;
+    border: 1px solid var(--popcorn);
+    border-radius: .1em;
+    padding: .7em;
+    color: var(--butter);
+    font-size: 1em;
+    width: 250px;
+}
+
+.movie-poster {
+    width: 15em;
+}
+
+.movie-name {
+    margin: .5em;
+}
+
+.movie-rating {
+    width: 1em;
+}
+
+/************ Trending Content ************/
+
+.movie {
+    width: 300px;
+    margin: 2rem;
+    border-radius: 3px;
+    background-color: var(--gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img{
+    width:100%;
+}
+
+.movie-info{
+    color:#202020;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem .9rem .5rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    color: var(--bg);
+    line-height: .3in;
+}
+
+.movie-info span{
+    background-color: var(--bg);
+    padding: 0.6rem 0.8rem;
+    border-radius: 50px;
+}
+
+.movie-info span.green{
+    color:lightgreen;
+}
+
+.movie-info span.orange{
+    color:orange;
+}
+
+.movie-info span.red{
+    color: red;
+}
+
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-500%);
+    transition: transform 0.3s ease-in;
+    background-color: var(--cream);
+    padding: 1.5rem;
+    max-height: 100%; 
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+.overview h3{
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.overview p{
+    color: var(--gray);
 }
 
 /************ footer ************/
 
-footer  {
+footer {
     text-align: center;
     margin-top: auto;
     background-color: var(--cream);
@@ -185,11 +312,23 @@ footer  {
 /************ mobile responsiveness ************/
 
 @media screen and (max-width: 800px) {
-    ul.navbar a.right, 
-    ul.navbar a {float: none;}
+
+    ul.navbar a.right,
+    ul.navbar a {
+        float: none;
+    }
+
     .navbar a.link {
         font-size: 1em;
         color: var(--bg);
         padding: 10px;
+    }
+
+    .movie-poster {
+        width: 12em;
+    }
+
+    .movie {
+        width: 280px;
     }
 }

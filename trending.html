@@ -25,26 +25,35 @@
         </nav>
     </header>
 
-
     <div class="content">
         <main>
-            <section>
-                <h1>Get the Popcorn Ready!</h1>
-                <p>
-                    Search for a movie to see the release date, actors, plot, and more, just enter a movie title below!
-                    <p>
-                <form>
-                    <input name="search" id="movie-search" type="text" placeholder="Movie Title...">
-                    <button type="submit" class="button">Search</button>
-                </form>
-                <div id="searchResults"></div>
-                <br>
-                <button type="submit" class="button" id="youtube-search">Watch the Trailer</button>
-                <button type="submit" class="button" id="amazon-search">Find on Amazon</button>
-                </p>
+
+            <h1>Trending Movies</h1>
+            <p>Check out what's <span class="glow">HOT</span>!</p>
+            <br>These are the top trending movies in order of popularity.
+            <p></p>
+
+            <section id="mainSection" class="trending">
+                <div class="movie">
+                    <img src="" alt="Image">
+
+                    <div class="movie-info">
+                        <h3>Movie Title</h3>
+                        <span class="green">9.8</span>
+                    </div>
+
+                    <div class="overview">
+                        <h3>Overview</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error sint rerum consequatur
+                            molestiae tempore eaque porro id, praesentium quia, tenetur, sapiente explicabo alias
+                            adipisci assumenda! Optio voluptatibus eveniet porro expedita.</p>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
+
+    <script src="trending.js"></script>
 
     <footer>
         Keep it Reel!
@@ -52,7 +61,6 @@
         © 2023 - Bauer, Brown and Colver.
     </footer>
 
-    <script src="movies.js"></script>
-
 </body>
+
 </html>

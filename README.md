@@ -1,4 +1,4 @@
-## Movie and TV Show Information Database Website
+## Movie Database Website
 <p align="center">🎬📽️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🍿📺</p>
 
 ## APIs used
